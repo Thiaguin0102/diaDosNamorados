@@ -1,0 +1,190 @@
+body{
+    background-image: url("https://img.freepik.com/fotos-premium/dia-dos-namorados-coracoes-vermelhos-em-fundo-branco_143106-71.jpg?w=2000");
+    background-repeat: repeat;
+    background-size: cover;
+    main{
+        .home{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            .caixa{
+            background-color: rgb(255, 255, 255);
+            border: 3px solid red;
+            border-radius: 15px;
+            text-align: center;
+            padding: 25px 25px;
+            h1{
+                font-size: 40px;
+                color: red;
+                font-family: "Pacifico", cursive;
+            }
+            p{
+                margin-top: 15px;
+                font-size: 20px;
+                line-height: 1.5;
+                font-family: "Poppins", sans-serif;
+            }
+
+            h2{
+                margin-top: 20px;
+                font-size: 35px;
+                font-family: "Pacifico", cursive;
+            }
+            #contador{
+                margin-top: 5px;
+                font-size: 25px;
+                color: rgb(255, 67, 67);
+                font-family: "Poppins", sans-serif;
+            }
+        }
+    }
+        .secao_fotos{
+            margin-top: 35px;
+            h1{
+                font-size: 50px;
+                text-align: center;
+                font-family: "Pacifico", cursive;
+            }
+            p{
+                font-size: 30px;
+                text-align: center;
+                margin-top: 25px;
+                font-family: "Pacifico", cursive;
+                color: rgb(0, 0, 0);
+                span{
+                    color: gray;
+                }
+            }
+            .album{
+                width: 100%;
+                overflow: hidden;
+                margin-top: 40px;
+                .carrossel{
+                    display: flex;
+                    transition: transform 0.5s ease-in-out;
+                }
+                .fotos, .videos {
+                    min-width: 20%; /* Each item takes full width of the carousel */
+                    display: flex;
+                    gap: 10px;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 10px;
+                }
+                img{
+                    transition: transform 0.3s;
+                    width: 225px;
+                    height: 380px;
+                    border: 4px solid rgb(255, 52, 52);
+                    padding: 10px 10px;
+                    border-radius: 10px;
+                    transition: 0.5s ease-in-out;
+                    &:hover{
+                        border: 4px solid black;
+                        transform: scale(1.05);
+                    }
+                }
+                video{
+                    width: 225px;
+                    height: 380px;
+                    border: 4px solid rgb(254, 52, 52);
+                    padding: 10px 5px;
+                    border-radius: 10px;
+                    transition: 0.5s ease-in-out;
+                    &:hover{
+                        border: 4px solid black;
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+        .musicas{
+            margin-top: 100px;
+            h1{
+                font-size: 40px;
+                font-family: "Pacifico", cursive;
+                text-align: center;
+                margin-bottom: 40px;
+            }
+            .msc_dedicadas{
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                .msc_direita{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                }
+                .msc_esquerda{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 480px) {
+    .home{
+        .caixa{
+        padding: 15px 15px;
+        }
+        h1{
+            font-size: 20px;
+        }
+        p{
+            margin-top: 8px;
+            font-size: 10px;
+        }
+        h2{
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        #contador{
+            font-size: 10px;
+        }
+    }
+    .secao_fotos{
+        h1{
+            font-size: 22px;
+        }
+        p{
+            font-size: 13px;
+            margin-top: 15px;
+        }
+        .album{
+            .fotos, .videos {
+                min-width: 50%; /* Each item takes full width of the carousel */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 5px;
+            }
+            img{
+                transition: transform 0.3s;
+                width: 175px;
+                height: 200px;
+                border:none;
+                padding: 5px 5px;
+                border-radius: none;
+                transition: 0.5s ease-in-out;
+                &:hover{
+                    border: 2px solid black;
+                    transform: scale(1.05);
+                }
+            }
+            video{
+                width: 155px;
+                height: 200px;
+                border: none;
+                transition: 0.5s ease-in-out;
+                &:hover{
+                    border: 4px solid black;
+                    transform: scale(1.05);
+                }
+            }
+        }
+    } 
+}
